@@ -50,30 +50,6 @@ const About = () => (
           </li>
         </ul>
       </Section>
-      <Section>
-        <h3>Conferences & Seminars</h3>
-        2018
-        <ul>
-          <li>Django Girls 2018 Workshop, 2018.6, Seoul</li>
-          <li>JSConf EU 2018, 2018.6, Berlin 🇩🇪</li>
-          <li>Women Techmakers 2018, 2018.4, Seoul</li>
-          <li>Typescript Meetup, 2018.1, Seoul</li>
-        </ul>
-        2017
-        <ul>
-          <li>React Seoul 2017, 2017.11, Seoul</li>
-          <li>FrontEndConf 2017, 2017.10, Seoul</li>
-          <li>DEVIEW 2017, 2017.10, Seoul</li>
-          <li>Hack4Climate Korea, 2017.9, Seoul</li>
-          <li>Vuetiful Korea, 2017.8, Seoul</li>
-          <li>PyCon 2017, 2017.8, Seoul</li>
-          <li>RISE 2017, 2017.7, Hong Kong 🇭🇰</li>
-          <li>Pitch Like A Girl, 2017.7, Hong Kong 🇭🇰</li>
-          <li>Django Girls 2017 Workshop, 2017.6, Seoul</li>
-          <li>Women Techmakers 2017, 2017.4, Seoul</li>
-          <li>Korea Community Day 2017, 2017.2, Seoul</li>
-        </ul>
-      </Section>
     </Wrapper>
   </Container>
 );
