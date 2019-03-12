@@ -1,0 +1,322 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-index-js-f09f1c3b1856ecb1d71a.js" as="script"/><link rel="preload" href="/component---src-templates-blog-post-js-4a4da895250f84175023.js" as="script"/><link rel="preload" href="/path---basic-data-structures-14d1d1f41052f4ade4dd.js" as="script"/><link rel="preload" href="/app-197ce165e4c3b97020a4.js" as="script"/><link rel="preload" href="/commons-084505cd4fd6b32f6bf7.js" as="script"/><title data-react-helmet="true">Basic Data Structures - Camels and Snakes</title><meta data-react-helmet="true" name="jyhwng" content="blog"/><link rel="manifest" href="/favicons/manifest.json"/><link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-320x460.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x920.png"/><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-640x1096.png"/><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-750x1294.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/favicons/apple-touch-startup-image-1182x2208.png"/><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/favicons/apple-touch-startup-image-1242x2148.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-748x1024.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/favicons/apple-touch-startup-image-768x1004.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-1496x2048.png"/><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/favicons/apple-touch-startup-image-1536x2008.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="shortcut icon" href="/favicons/favicon.ico"/><link rel="icon" type="image/png" sizes="228x228" href="/favicons/coast-228x228.png"/><meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png"/><meta name="msapplication-config" content="/favicons/browserconfig.xml"/><link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json"/><style id="gatsby-inlined-css">@font-face{font-family:PT Mono;src:url(/static/PTM55FT.75758927.ttf)}@font-face{font-family:Noto Sans;src:url(/static/NotoSans-Regular.2fd9c16b.ttf)}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;padding:0;font-family:PT Mono;color:#303030;height:100%}code{border-radius:3px;background-color:#f5f2f0;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace}a{color:#0366d6}p{line-height:1.6}.twitter-tweet{margin:0 auto}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:none;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0}:not(pre)>code[class*=language-],pre[class*=language-]{background:#efefef}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:none}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}blockquote{color:#aaa;margin-left:0;padding-left:1em;border-left:2px solid #aaa}table{border-spacing:0;border-collapse:collapse}table,td,th{border:1px solid #aaa}td,th{padding:4px 8px}pre[class*=language-]{padding:1em;margin:16px 0;overflow:auto}img{max-width:100%}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="1080301603"><!-- react-empty: 2 --><nav class="sc-EHOje fkuXzE" data-reactid="3"><div class="sc-ifAKCX dGawaw" data-reactid="4"><nav class="sc-EHOje fkuXzE" data-reactid="5"><a href="/" data-reactid="6"><span data-reactid="7">🐫 and 🐍</span></a><ul class="sc-bwzfXH ajxSd" data-reactid="8"><li class="sc-htpNat kTRsIO" data-reactid="9"><a href="/" data-reactid="10">Posts</a></li><li class="sc-htpNat kTRsIO" data-reactid="11"><a href="/about" data-reactid="12">About</a></li></ul></nav></div><div class="sc-bxivhb deVMkm" data-reactid="13"><a href="/" data-reactid="14"><span data-reactid="15">🐫 and 🐍</span></a><ul class="sc-bwzfXH ajxSd" data-reactid="16"><li class="sc-htpNat kTRsIO" data-reactid="17"><a href="/" data-reactid="18">Posts</a></li><li class="sc-htpNat kTRsIO" data-reactid="19"><a href="/about" data-reactid="20">About</a></li></ul></div></nav><div data-reactid="21"><div data-reactid="22"><!-- react-empty: 23 --><div class="sc-gZMcBi koTAzG" data-reactid="24"><div class="sc-bdVaJa bdlJDZ" data-reactid="25"><h1 data-reactid="26">Basic Data Structures</h1><p class="sc-gqjmRU kjuOwi" data-reactid="27">Python Algorithm Study - Week 3, 4</p><div data-reactid="28"><span class="sc-iwsKbI cItoSH" data-reactid="29">Algorithm</span><span class="sc-iwsKbI cItoSH" data-reactid="30">python</span></div><p class="sc-gqjmRU kjuOwi" data-reactid="31">2017-08-03</p></div><hr class="sc-VigVT iyhJzu" data-reactid="32"/><div class="sc-bdVaJa bdlJDZ" data-reactid="33"><div class="sc-jTzLTM bYIkww" data-reactid="34"><p><a href="http://interactivepython.org/courselib/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures using Python</a> 책을 읽으며 스터디한 내용을 정리하여 연재합니다.</p>
+<hr>
+<ol>
+<li><strong>Stack</strong> : insertion and deletion of items takes place only at a single end called <em>top</em> of the stack</li>
+<li><strong>Queue</strong></li>
+<li><strong>Deque</strong></li>
+</ol>
+<hr>
+<h2>4. List</h2>
+<ol>
+<li>
+<p>O(1) vs O(n)</p>
+<ul>
+<li>리스트를 사용하여 Stack 클래스를 만들 경우, <code>pop()</code> 이나 <code>append()</code>는 <code>O(1)</code>이다. 자리에 상관 없이 맨 마지막에 들어가기 때문.</li>
+<li>그러나 <code>pop(0)</code>, <code>insert(0, x)</code> 는 <code>O(n)</code>이다. 앞에서부터 자리수가 다 바뀌기 때문.</li>
+<li>논리적으로 같더라도, <strong>벤치마크 테스팅</strong> 을 하면 속도가 달라진다. (even though the implementations are logically equivalent, they would have very different timings when performing benchmark testing)</li>
+</ul>
+</li>
+<li>
+<p>Linked Lists</p>
+<ol>
+<li>
+<p>Linked list 란?  <a href="https://en.wikipedia.org/wiki/Linked_list">(Wikipedia)</a></p>
+<ul>
+<li>Linear 한 데이터의 모음</li>
+<li>
+<p>인덱스(?)가 부여되어 있지 않음 (그만큼 메모리를 안먹음)</p>
+<ul>
+<li>파이썬의 리스트는 인덱스가 부여되어 있다! 그래서 중간에 insert 하는건 <code>O(n)</code></li>
+<li>대신 pointer라고 하는 애가 다음 데이터를 가리키고 있음</li>
+</ul>
+</li>
+<li>물론 첫 데이터는 처음이라는 표시가 있고, 마지막 데이터는 포인터를 갖고 있지 않음</li>
+<li>각각의 데이터를 node 라고 부름. 이 node 가 모인 것이 sequence. 즉, 각각의 node 는 데이터와 레퍼런스를 갖고 있는 셈</li>
+</ul>
+</li>
+<li>
+<p>Linked list를 구현하는 이유</p>
+<ul>
+<li>리스트 중간에 아이템을 넣거나 뺄 수 있다.</li>
+<li>스택과 큐를 만들 수 있다.</li>
+<li>처음에 사이즈를 지정할 필요가 없다.</li>
+</ul>
+</li>
+<li>
+<p>Linked list의 단점</p>
+<ul>
+<li>pointer 때문에 array 보다 메모리를 더 먹는다.</li>
+<li>sequence이기 때문에 한 아이템을 찾으려면 진입점부터 하나 하나 체크해야 한다.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2>1-1. Unordered List</h2>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python"><span class="token comment"># Pythonic way to define getter/setter/deleter - @property를 쓰세요!</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Node</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> initdata<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> initdata
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+        <span class="token comment"># Note in the constructor that a node is initially created with next set to None. Since this is sometimes referred to as “grounding the node,” we will use the standard ground symbol to denote a reference that is referring to None. It is always a good idea to explicitly assign None to your initial next reference values.</span>
+
+    <span class="token keyword">def</span> <span class="token function">getData</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>data
+
+    <span class="token keyword">def</span> <span class="token function">getNext</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span><span class="token builtin">next</span>
+
+    <span class="token keyword">def</span> <span class="token function">setData</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>newdata<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> newdata
+
+    <span class="token keyword">def</span> <span class="token function">setNext</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>newnext<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> newnext
+
+<span class="token keyword">class</span> <span class="token class-name">PythonicNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> initdata<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> initdata
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    @<span class="token builtin">property</span>
+    <span class="token keyword">def</span> <span class="token function">x</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>data
+
+    @x<span class="token punctuation">.</span>setter
+    <span class="token keyword">def</span> <span class="token function">x</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> newdata<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>data <span class="token operator">=</span> newdata
+
+    @x<span class="token punctuation">.</span>deleter
+    <span class="token keyword">def</span> <span class="token function">x</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">del</span> self<span class="token punctuation">.</span>data
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python">temp <span class="token operator">=</span> PythonicNode<span class="token punctuation">(</span><span class="token number">93</span><span class="token punctuation">)</span>
+
+<span class="token comment"># getter</span>
+temp<span class="token punctuation">.</span>x <span class="token comment"># 93</span>
+
+<span class="token comment"># setter</span>
+temp<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">1234</span>
+temp<span class="token punctuation">.</span>x <span class="token comment"># 1234</span>
+
+<span class="token comment"># deleter</span>
+<span class="token keyword">del</span> temp<span class="token punctuation">.</span>x
+</code></pre>
+      </div>
+<hr>
+<h2>1-2. The Unordered List Class</h2>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">UnorderedList</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token comment"># 이 클래스는 첫 노드에 대한 레퍼런스를 반드시 가져야 한다. (... class must maintain a reference to the first node.)</span>
+    <span class="token comment"># 그런데 이 생성자에 head가 none 인 이유는 막 생성된 리스트는 아무 노드도 없기 때문!</span>
+
+    <span class="token keyword">def</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>head <span class="token operator">==</span> <span class="token boolean">None</span>
+    <span class="token comment"># 이 리스트가 있는지 없는지 보려면 head가 있는지 없는지만 보면 됨. 그래서 boolean식으로 알아봄</span>
+
+    <span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> Node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>    <span class="token comment"># temp는 노드 클래스의 인스턴스여야 하고,</span>
+        temp<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>self<span class="token punctuation">.</span>head<span class="token punctuation">)</span>    <span class="token comment"># 새로운 temp가 들어오면, 원래 있던 head(None)는 temp의 next가 되고,</span>
+        self<span class="token punctuation">.</span>head <span class="token operator">=</span> temp    <span class="token comment"># temp는 새로운 head가 된다! - modify the head of the list to refer to the new node</span>
+
+    <span class="token comment"># 3,4번째 라인의 순서가 중요하다!</span>
+    <span class="token comment"># x.next == None 이면, x 는 이 리스트의 첫 데이터</span>
+
+    <span class="token keyword">def</span> <span class="token function">size</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        count <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>    <span class="token comment"># head 가 None이 나올때까지, 끝까지 돈다.</span>
+            count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>     <span class="token comment"># while loop가 도는 횟수를 센다.</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> count
+
+    <span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        found <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token operator">and</span> <span class="token operator">not</span> found<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> item<span class="token punctuation">:</span>
+                found <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> found
+
+    <span class="token comment"># head부터 차근차근 찾아나간다. 일치하지 않으면 found가 False를, 일치하면 True를 뱉어냄.</span>
+
+    <span class="token keyword">def</span> <span class="token function">print_all</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">remove</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># 제거하고 싶은 노드의 앞,뒤 링크를 끊어주면 된다.</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        previous <span class="token operator">=</span> <span class="token boolean">None</span>
+        found <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">while</span> <span class="token operator">not</span> found<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> item<span class="token punctuation">:</span>
+                found <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                previous <span class="token operator">=</span> current
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> previous <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>head <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            previous<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 순서는 바꿨는데, node 인스턴스는 그대로 남아있잖아? (size는 그대로 아닌가?)</span>
+
+
+    <span class="token comment"># 함께 풀어봅시다!!    </span>
+    <span class="token keyword">def</span> <span class="token function">append</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># item이 last가 되려면? 처음 들어온 아이템까지 가서 그 next에 item을 붙인다.</span>
+        temp <span class="token operator">=</span> Node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+
+        <span class="token keyword">while</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        current<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python">mylist <span class="token operator">=</span> UnorderedList<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>mylist<span class="token punctuation">.</span>head<span class="token punctuation">)</span>
+<span class="token comment"># None</span>
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python">mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">77</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">93</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">54</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>mylist<span class="token punctuation">.</span>head<span class="token punctuation">)</span>
+
+<span class="token comment"># &lt;__main__.Node object at 0x1045acf28></span>
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python">mylist<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 6</span>
+
+mylist<span class="token punctuation">.</span>print_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 54</span>
+<span class="token comment"># 26</span>
+<span class="token comment"># 93</span>
+<span class="token comment"># 17</span>
+<span class="token comment"># 77</span>
+<span class="token comment"># 31</span>
+
+mylist<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span>
+<span class="token comment"># True</span>
+
+mylist<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>print_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 54</span>
+<span class="token comment"># 26</span>
+<span class="token comment"># 93</span>
+<span class="token comment"># 77</span>
+<span class="token comment"># 31</span>
+
+mylist<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">14923</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>print_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 54</span>
+<span class="token comment"># 26</span>
+<span class="token comment"># 93</span>
+<span class="token comment"># 77</span>
+<span class="token comment"># 31</span>
+<span class="token comment"># 14923</span>
+</code></pre>
+      </div>
+<hr>
+<h2>2-1. Ordered List</h2>
+<p>OrderedList()</p>
+<div class="gatsby-highlight">
+      <pre class="language-none"><code class="language-none">- add(item)
+- remove(item)
+- search(item)
+- isEmpty()
+- size()
+- append(item)
+- index(item)
+- insert(pos,item)
+- pop()
+- pop(pos)</code></pre>
+      </div>
+<p>(append, insert가 안됨)</p>
+<hr>
+<h2>2-2. The Ordered List Class</h2>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">OrderedList</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment"># 크기의 순서가 있기 때문에 끝까지 돌지 않아도 된다.</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        found <span class="token operator">=</span> <span class="token boolean">False</span>
+        stop <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token operator">and</span> <span class="token operator">not</span> found <span class="token operator">and</span> <span class="token operator">not</span> stop<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> item<span class="token punctuation">:</span>
+                found <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> item<span class="token punctuation">:</span>    <span class="token comment"># 찾는 데이터보다 큰곳까지 왔는데도 없다면, 여긴 없다는 뜻. iteration을 stop 해도 된다.</span>
+                    stop <span class="token operator">=</span> <span class="token boolean">True</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> found
+
+    <span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>item<span class="token punctuation">)</span><span class="token punctuation">:</span>   <span class="token comment"># unordered랑 다르게, 아무데나 들어가선 안되고, 크기에 맞게 들어가야한다.</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        previous <span class="token operator">=</span> <span class="token boolean">None</span>
+        stop <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span> <span class="token operator">and</span> <span class="token operator">not</span> stop<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> item<span class="token punctuation">:</span>
+                stop <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                previous <span class="token operator">=</span> current
+                current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        temp <span class="token operator">=</span> Node<span class="token punctuation">(</span>item<span class="token punctuation">)</span>    <span class="token comment"># 인스턴스 생성해주고,</span>
+        <span class="token keyword">if</span> previous <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            temp<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>self<span class="token punctuation">.</span>head<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>head <span class="token operator">=</span> temp
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            temp<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>current<span class="token punctuation">)</span>    <span class="token comment"># item 보다 큰 current 는 item 뒤에 넣어주고</span>
+            previous<span class="token punctuation">.</span>setNext<span class="token punctuation">(</span>temp<span class="token punctuation">)</span>    <span class="token comment"># item보다 작은 previous의 next 에 item을 넣어준다.</span>
+
+    <span class="token keyword">def</span> <span class="token function">print_all</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        current <span class="token operator">=</span> self<span class="token punctuation">.</span>head
+        <span class="token keyword">while</span> current <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>getData<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            current <span class="token operator">=</span> current<span class="token punctuation">.</span>getNext<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-python"><code class="language-python">mylist <span class="token operator">=</span> OrderedList<span class="token punctuation">(</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">77</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">93</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span>
+mylist<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">54</span><span class="token punctuation">)</span>
+
+mylist<span class="token punctuation">.</span>print_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 17</span>
+<span class="token comment"># 26</span>
+<span class="token comment"># 31</span>
+<span class="token comment"># 54</span>
+<span class="token comment"># 77</span>
+<span class="token comment"># 93</span>
+</code></pre>
+      </div></div></div></div></div></div><div data-reactid="35"><footer class="sc-bZQynM eSgTbN" data-reactid="36"><div class="sc-gzVnrw iKrxfs" data-reactid="37"><p data-reactid="38"><!-- react-text: 39 -->Found an error? Help me correct by submitting issues<!-- /react-text --><!-- react-text: 40 --> <!-- /react-text --><a href="https://github.com/jyhwng/blog/" target="_blank" data-reactid="41">here</a><!-- react-text: 42 -->.<!-- /react-text --></p><p data-reactid="43">© 2017-2018 Jiyoung Hwang</p></div></footer><div class="sc-htoDjs jLtHvB" data-reactid="44"><a class="sc-dnqmqq gVgCNC" data-reactid="45"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-reactid="46"><circle cx="12" cy="12" r="10" data-reactid="47"></circle><polyline points="16 12 12 8 8 12" data-reactid="48"></polyline><line x1="12" y1="16" x2="12" y2="8" data-reactid="49"></line></svg></a><a class="sc-dnqmqq gVgCNC" data-reactid="50"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-reactid="51"><circle cx="12" cy="12" r="10" data-reactid="52"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" data-reactid="53"></path><line x1="12" y1="17" x2="12" y2="17" data-reactid="54"></line></svg></a></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-197ce165e4c3b97020a4.js","107818501498521":"component---src-templates-blog-post-js-4a4da895250f84175023.js","162898551421021":"component---src-pages-404-js-d0a10387f924ba262148.js","263791100135453":"component---src-pages-about-js-d9c4d9488893e78d4b22.js","35783957827783":"component---src-pages-index-js-7fa4357668eaafb83349.js","60335399758886":"path----557518bd178906f8d58a.js","224304433232271":"path---performance-optimization-with-cache-control-d6527be5d9da88ea8c45.js","71194334513297":"path---html-5-input-c66835122b6e326c30c5.js","138992667808482":"path---dev-env-setup-8817bba029911f1ca28e.js","104302916089247":"path---presentational-and-container-components-55d03dffb1c5b9a69759.js","185167548523788":"path---arrow-function-2a47741db506146bb6ff.js","259753390780669":"path---closure-bc4d9d274d004f052a82.js","105308378646500":"path---call-and-apply-85da80e8a3dc391e0a76.js","43911150729035":"path---aws-deploy-9b16572b818d61287589.js","224068526013896":"path---djang-admin-heroku-6d81b19bbfd3f31d9660.js","35460684223215":"path---dangolgongjang-d9c21b98818560c57705.js","229086761010437":"path---clean-code-1-f0488df34879ca35a313.js","193233916493314":"path---sort-search-23cdc24cf2ce8b08a569.js","165660366624263":"path---clean-code-2-8aaef74a97cd1ef7df76.js","256918967124187":"path---basic-data-structures-14d1d1f41052f4ade4dd.js","3036334675900":"path---drf-1-a70e169c90703ddd4073.js","39732828839030":"path---drf-2-a25459e6448bf9320a56.js","120382642648145":"path---recursion-b3cb73410fbcdbcfbccb.js","53561163571803":"path---tree-260fd481cc39c173f78c.js","68651449141504":"path---repick-c34a57962358f220e11b.js","34599566547020":"path---font-face-work-around-f844443a7f14aad11af3.js","107324654902767":"path---literals-and-constructors-e37ab05214ec7c9f6c17.js","240338906381431":"path---callback-72a59a23ad53fd0b4c6c.js","204596129026606":"path---django-aws-a55fb60e2eacdef0c36d.js","106153616264892":"path---es-6-class-139c03fd3ecfe822e47f.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","273950069227526":"path---about-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-454ff3bc9fe9a494be64.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-f09f1c3b1856ecb1d71a.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/commons-084505cd4fd6b32f6bf7.js","/app-197ce165e4c3b97020a4.js","/path---basic-data-structures-14d1d1f41052f4ade4dd.js","/component---src-templates-blog-post-js-4a4da895250f84175023.js","/component---src-layouts-index-js-f09f1c3b1856ecb1d71a.js"])/*]]>*/</script><script async="" src="https://platform.twitter.com/widgets.js"></script></body></html>

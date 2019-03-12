@@ -1,0 +1,152 @@
+{
+  "assetsByChunkName": {
+    "path---drf-1": [
+      "path---drf-1-a70e169c90703ddd4073.js",
+      "path---drf-1-a70e169c90703ddd4073.js.map"
+    ],
+    "path---font-face-work-around": [
+      "path---font-face-work-around-f844443a7f14aad11af3.js",
+      "path---font-face-work-around-f844443a7f14aad11af3.js.map"
+    ],
+    "path---dangolgongjang": [
+      "path---dangolgongjang-d9c21b98818560c57705.js",
+      "path---dangolgongjang-d9c21b98818560c57705.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-7fa4357668eaafb83349.js",
+      "component---src-pages-index-js-7fa4357668eaafb83349.js.map"
+    ],
+    "path---drf-2": [
+      "path---drf-2-a25459e6448bf9320a56.js",
+      "path---drf-2-a25459e6448bf9320a56.js.map"
+    ],
+    "path---aws-deploy": [
+      "path---aws-deploy-9b16572b818d61287589.js",
+      "path---aws-deploy-9b16572b818d61287589.js.map"
+    ],
+    "path---tree": [
+      "path---tree-260fd481cc39c173f78c.js",
+      "path---tree-260fd481cc39c173f78c.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---repick": [
+      "path---repick-c34a57962358f220e11b.js",
+      "path---repick-c34a57962358f220e11b.js.map"
+    ],
+    "path---html-5-input": [
+      "path---html-5-input-c66835122b6e326c30c5.js",
+      "path---html-5-input-c66835122b6e326c30c5.js.map"
+    ],
+    "path---presentational-and-container-components": [
+      "path---presentational-and-container-components-55d03dffb1c5b9a69759.js",
+      "path---presentational-and-container-components-55d03dffb1c5b9a69759.js.map"
+    ],
+    "path---call-and-apply": [
+      "path---call-and-apply-85da80e8a3dc391e0a76.js",
+      "path---call-and-apply-85da80e8a3dc391e0a76.js.map"
+    ],
+    "path---es-6-class": [
+      "path---es-6-class-139c03fd3ecfe822e47f.js",
+      "path---es-6-class-139c03fd3ecfe822e47f.js.map"
+    ],
+    "path---literals-and-constructors": [
+      "path---literals-and-constructors-e37ab05214ec7c9f6c17.js",
+      "path---literals-and-constructors-e37ab05214ec7c9f6c17.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-4a4da895250f84175023.js",
+      "component---src-templates-blog-post-js-4a4da895250f84175023.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-f09f1c3b1856ecb1d71a.js",
+      "component---src-layouts-index-js-f09f1c3b1856ecb1d71a.js.map"
+    ],
+    "path---recursion": [
+      "path---recursion-b3cb73410fbcdbcfbccb.js",
+      "path---recursion-b3cb73410fbcdbcfbccb.js.map"
+    ],
+    "path---dev-env-setup": [
+      "path---dev-env-setup-8817bba029911f1ca28e.js",
+      "path---dev-env-setup-8817bba029911f1ca28e.js.map"
+    ],
+    "path---index": [
+      "path---index-454ff3bc9fe9a494be64.js",
+      "path---index-454ff3bc9fe9a494be64.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-d0a10387f924ba262148.js",
+      "component---src-pages-404-js-d0a10387f924ba262148.js.map"
+    ],
+    "path---clean-code-2": [
+      "path---clean-code-2-8aaef74a97cd1ef7df76.js",
+      "path---clean-code-2-8aaef74a97cd1ef7df76.js.map"
+    ],
+    "commons": [
+      "commons-084505cd4fd6b32f6bf7.js",
+      "build-js-styles.css",
+      "commons-084505cd4fd6b32f6bf7.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---arrow-function": [
+      "path---arrow-function-2a47741db506146bb6ff.js",
+      "path---arrow-function-2a47741db506146bb6ff.js.map"
+    ],
+    "path---sort-search": [
+      "path---sort-search-23cdc24cf2ce8b08a569.js",
+      "path---sort-search-23cdc24cf2ce8b08a569.js.map"
+    ],
+    "path---django-aws": [
+      "path---django-aws-a55fb60e2eacdef0c36d.js",
+      "path---django-aws-a55fb60e2eacdef0c36d.js.map"
+    ],
+    "path---djang-admin-heroku": [
+      "path---djang-admin-heroku-6d81b19bbfd3f31d9660.js",
+      "path---djang-admin-heroku-6d81b19bbfd3f31d9660.js.map"
+    ],
+    "path---performance-optimization-with-cache-control": [
+      "path---performance-optimization-with-cache-control-d6527be5d9da88ea8c45.js",
+      "path---performance-optimization-with-cache-control-d6527be5d9da88ea8c45.js.map"
+    ],
+    "path---clean-code-1": [
+      "path---clean-code-1-f0488df34879ca35a313.js",
+      "path---clean-code-1-f0488df34879ca35a313.js.map"
+    ],
+    "app": [
+      "app-197ce165e4c3b97020a4.js",
+      "build-js-styles.css",
+      "app-197ce165e4c3b97020a4.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---callback": [
+      "path---callback-72a59a23ad53fd0b4c6c.js",
+      "path---callback-72a59a23ad53fd0b4c6c.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---basic-data-structures": [
+      "path---basic-data-structures-14d1d1f41052f4ade4dd.js",
+      "path---basic-data-structures-14d1d1f41052f4ade4dd.js.map"
+    ],
+    "path---closure": [
+      "path---closure-bc4d9d274d004f052a82.js",
+      "path---closure-bc4d9d274d004f052a82.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-d9c4d9488893e78d4b22.js",
+      "component---src-pages-about-js-d9c4d9488893e78d4b22.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
