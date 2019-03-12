@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "PT Mono";
+  src: url('../fonts/PTM55FT.ttf');
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url('../fonts/Noto_Sans/NotoSans-Regular.ttf');
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Mono";
+  color: #303030;
+  height: 100%;
+}
+
+code {
+  border-radius: 3px;
+  background-color: #f5f2f0;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+a {
+  color: #0366d6
+}
+
+p {    
+  line-height: 1.6;
+}
+
+.twitter-tweet {
+  margin: 0 auto;
+}
