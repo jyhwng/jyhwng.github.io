@@ -1,9 +1,9 @@
 ---
 path: "/html5-input"
 date: "2018-04-29"
-title: "Let's use input to the fullest"
+title: "Using proper input type in HTML5"
 tags: ["html5", "datalist" ]
-excerpt: "Using proper input type in HTML5"
+excerpt: ""
 type: "post"
 ---
 

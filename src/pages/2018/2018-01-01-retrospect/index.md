@@ -2,7 +2,7 @@
 path: "/2017-in-retrospect"
 date: "2018-01-01"
 title: "2017 in Retrospect"
-tags: ["learning" ]
+tags: []
 excerpt: ""
 type: "post"
 ---
@@ -33,7 +33,7 @@ type: "post"
 
 ### Side project
 
-Seoul Startup 이라는 커뮤니티 행사에서 스웨덴 개발자 친구를 만났다. 스타트업에 다니며 본인의 프로젝트를 하는 친구였다. 며칠 뒤 (지금 생각해보면 말도 안되지만) 그의 프로젝트에 합류하지 않겠냐는 슬랙이 왔다. 그 팀은 고양이 손이라도 빌려야했고, 나도 마침 배우고 싶은 스택에 프로젝트도 너무 마음에 들던 차였다. 그리고 10 월까지 약 6 개월 동안 Vue/Meteor/MongoDB/AWS 를 써서 repick.co 를 만들었다. 우리끼리 하는 거지만 나름 공동창업자 계약서도 작성하고 지분도 나누고 하니 정말 내 것 같았다. 그래서 더 들여다보고 코드도 신경쓰고 하며 실력이 한층 늘었던 것 같다.
+Seoul Startup 이라는 커뮤니티 행사에서 스웨덴 개발자 친구를 만났다. 스타트업에 다니며 본인의 프로젝트를 하는 친구였다. 며칠 뒤 (지금 생각해보면 말도 안되지만) 그의 프로젝트에 합류하지 않겠냐는 슬랙이 왔다. 그 팀은 고양이 손이라도 빌려야했고, 나도 마침 배우고 싶은 스택에 프로젝트도 너무 마음에 들던 차였다. 그리고 10 월까지 약 6 개월 동안 Vue/Meteor/MongoDB/AWS 를 써서 [repick.co](https://repick.co) 를 만들었다. 우리끼리 하는 거지만 나름 공동창업자 계약서도 작성하고 지분도 나누고 하니 정말 내 것 같았다. 그래서 더 들여다보고 코드도 신경쓰고 하며 실력이 한층 늘었던 것 같다.
 
 리모트로 협업했기 때문에 매주 한 번씩 페어프로그래밍을 했는데 그게 정말 도움이 많이 됐다. 일주일간 헤매던 문제를 같이 풀면서 디버깅은 어떻게 하는지, 어떤 흐름으로 로직을 짜는지, 어떻게 더 깨끗한 코드를 쓰는지 직접 보며 배울 수 있었다.
 
@@ -49,7 +49,7 @@ Seoul Startup 이라는 커뮤니티 행사에서 스웨덴 개발자 친구를 
 
 올해 약 20 개의 크고 작은 세미나, 밋업, 컨퍼런스에 다녀왔다. 당시엔 이해가 잘 안되더라도 한번 보고 들은 내용은 학습 거부감이 아주 낮아졌다. 애매했던 개념이 뚜렷해지기도 했다. 개발 경험을 현저히 개선하는 쿨한 툴들을 배워 오기도 했다.
 
-Women Techmakers​ 에서 짧게 장고걸스에 대해 발표를 했다. 장고걸스의 가치는 무엇이고, 초보 개발자에게 커뮤니티가 얼마나 도움이 됐는지에 대한 내용이었다. 올해는 썰푸는거 말고 기술 발표를 한번 해보고 싶다.
+[Women Techmakers​](https://wtm-kr2017.firebaseapp.com/) 에서 짧게 장고걸스에 대해 발표를 했다. 장고걸스의 가치는 무엇이고, 초보 개발자에게 커뮤니티가 얼마나 도움이 됐는지에 대한 내용이었다. 올해는 썰푸는거 말고 기술 발표를 한번 해보고 싶다.
 
 ### React
 
@@ -65,16 +65,16 @@ Women Techmakers​ 에서 짧게 장고걸스에 대해 발표를 했다. 장�
 
 ### 도움이 되었던 자료들
 
-1. Programming Doesn’t Require Talent or Even Passion - 장고 창시자, 부트스트랩 창시자, 레일즈 창시자까지 대가들이 프로그래머에겐 재능이나 열정이 별로 중요하지 않다고 한 것에서 용기를 얻었다.
+1. [Programming Doesn’t Require Talent or Even Passion](https://medium.com/@WordcorpGlobal/programming-doesnt-require-talent-or-even-passion-11422270e1e4) - 장고 창시자, 부트스트랩 창시자, 레일즈 창시자까지 대가들이 프로그래머에겐 재능이나 열정이 별로 중요하지 않다고 한 것에서 용기를 얻었다.
 
-2) 당신의 코딩 학습 방식을 바꿀 사진 - 개발자의 학습법. 특히 디버깅할 때 고정관념에서 벗어나야 한다는 말이 크게 도움되었다.
+2. [당신의 코딩 학습 방식을 바꿀 사진](https://joshua1988.github.io/web_dev/change-the-way-you-learn-to-code/) - 개발자의 학습법. 특히 디버깅할 때 고정관념에서 벗어나야 한다는 말이 크게 도움되었다.
 
-3. Roadmap to becoming a web developer in 2017 - 이 사진을 두고 '개발자가 되는데 걸리는 시간'을 누군가 정리해서 Learn Teach Code 의 슬랙에 올린 적 있다. 프런트엔드 개발자의 경우, 172+ 시간(HTML, CSS, Javascript, JQuery, Webpack...를 배우는 시간)이었다. `할만한데?`라고 생각이 들었다. 해보니 전혀 그렇지 않았지만 아득하기만 했던 그때 도움이 많이 되었던 거 같다.
+3. [Roadmap to becoming a web developer in 2017](https://github.com/kamranahmedse/developer-roadmap) - 이 사진을 두고 '개발자가 되는데 걸리는 시간'을 누군가 정리해서 Learn Teach Code 의 슬랙에 올린 적 있다. 프런트엔드 개발자의 경우, 172+ 시간(HTML, CSS, Javascript, JQuery, Webpack...를 배우는 시간)이었다. `할만한데?`라고 생각이 들었다. 해보니 전혀 그렇지 않았지만 아득하기만 했던 그때 도움이 많이 되었던 거 같다.
 
-4) Why “skilled in machine learning” should be the new “proficient in Excel” on your resume - '어제의 엑셀 == 오늘의 머신러닝'. 부모님이 갑자기 무슨 개발이냐 하셨을 때 꼭 이렇게 대답했었다.
+4. [Why “skilled in machine learning” should be the new “proficient in Excel” on your resume](https://qz.com/1006379/the-best-resumes-will-soon-have-skilled-in-machine-learning-instead-of-proficient-in-excel/) - '어제의 엑셀 == 오늘의 머신러닝'. 부모님이 갑자기 무슨 개발이냐 하셨을 때 꼭 이렇게 대답했었다.
 
-5. Geek Feminism - Imposter syndrome, 커뮤니티 Code of conduct, tech 계의 페미니즘 이야기 등
+5. [Geek Feminism](https://geekfeminism.org/) - Imposter syndrome, 커뮤니티 Code of conduct, tech 계의 페미니즘 이야기 등
 
-6) Why the best hire might not have the perfect resume - 'Hire the scrapper'. 구직을 할 땐 이 영상이 힘이 많이 됐다. 두 사람이 비슷한 능력을 갖고 있다면 더 힘들게 얻은 사람을 택하라는 내용이다.
+6. [Why the best hire might not have the perfect resume](https://www.ted.com/talks/regina_hartley_why_the_best_hire_might_not_have_the_perfect_resume?utm_campaign=social&utm_medium=referral&utm_source=facebook.com&utm_content=talk&utm_term=business) - 'Hire the scrapper'. 구직을 할 땐 이 영상이 힘이 많이 됐다. 두 사람이 비슷한 능력을 갖고 있다면 더 힘들게 얻은 사람을 택하라는 내용이다.
 
-7. What and why is web animation, CodeNewbie - 좋은 UX/UI 는 인지적인 부담(cognitive load)을 줄여줄 수 있다는 내용의 팟캐스트 에피소드. 덕분에 프런트엔드 개발에 더욱 흥미가 생겼다.
+7. [What and why is web animation](https://www.codenewbie.org/podcast/what-and-why-is-web-animation), CodeNewbie - 좋은 UX/UI 는 인지적인 부담(cognitive load)을 줄여줄 수 있다는 내용의 팟캐스트 에피소드. 덕분에 프런트엔드 개발에 더욱 흥미가 생겼다.

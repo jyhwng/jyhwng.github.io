@@ -117,15 +117,15 @@ yarn add lint-staged husky prettier --dev
 
 ---
 
-## python
+## 6. Python
 
 1. Install `python3`
+
+   * if python3 is not linked, run `brew link python`
 
 ```bash
 $ brew install python3
 ```
-
-    	- if python3 is not linked, run `brew link python`
 
 2. Install `pip`
 
@@ -148,7 +148,7 @@ $ virtualenv --python=/usr/local/bin/python3 venv3
 
 ---
 
-## poetry
+## 7. Python package management (Poetry)
 
 1. Install
 
