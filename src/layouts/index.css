@@ -1,11 +1,6 @@
 @font-face {
   font-family: "PT Mono";
-  src: url('../fonts/PTM55FT.ttf');
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src: url('../fonts/Noto_Sans/NotoSans-Regular.ttf');
+  src: url("../fonts/PTM55FT.ttf");
 }
 
 html {
@@ -23,15 +18,15 @@ body {
 
 code {
   border-radius: 3px;
-  background-color: #f5f2f0;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  background-color: #f6f8fa;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 a {
-  color: #0366d6
+  color: #0366d6;
 }
 
-p {    
+p {
   line-height: 1.6;
 }
 
