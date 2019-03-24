@@ -143,10 +143,10 @@ pre[class*="language-"] {
 /* custom css */
 
 blockquote {
-  color: #aaa;
   margin-left: 0;
-  padding-left: 1em;
-  border-left: 2px solid #aaa;
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
 }
 
 table {

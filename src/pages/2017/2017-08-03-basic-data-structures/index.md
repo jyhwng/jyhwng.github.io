@@ -11,40 +11,48 @@ type: ""
 
 ---
 
-1. __Stack__ : insertion and deletion of items takes place only at a single end called *top* of the stack
-2. __Queue__
-3. __Deque__
+## 1. **Stack**
+
+1. Last In, First Out: insertion and deletion of items takes place only at a single end called _top_ of the stack
+2. Stacks are fundamentally important, as they can be used to reverse the order of items.
+3. e.g. browser history
+
+---
+
+2. **Queue**
+3. **Deque**
 
 ---
 
 ## 4. List
 
-1. O(1) vs O(n)
-    - 리스트를 사용하여 Stack 클래스를 만들 경우, `pop()` 이나 `append()`는 `O(1)`이다. 자리에 상관 없이 맨 마지막에 들어가기 때문.
-    - 그러나 `pop(0)`, `insert(0, x)` 는 `O(n)`이다. 앞에서부터 자리수가 다 바뀌기 때문.
-    - 논리적으로 같더라도, __벤치마크 테스팅__ 을 하면 속도가 달라진다. (even though the implementations are logically equivalent, they would have very different timings when performing benchmark testing)
+### 1. O(1) vs O(n)
 
-2. Linked Lists
-    1. Linked list 란?  [(Wikipedia)](https://en.wikipedia.org/wiki/Linked_list)
-        - Linear 한 데이터의 모음
-        - 인덱스(?)가 부여되어 있지 않음 (그만큼 메모리를 안먹음)
-            - 파이썬의 리스트는 인덱스가 부여되어 있다! 그래서 중간에 insert 하는건 `O(n)`
-            - 대신 pointer라고 하는 애가 다음 데이터를 가리키고 있음
-        - 물론 첫 데이터는 처음이라는 표시가 있고, 마지막 데이터는 포인터를 갖고 있지 않음
-        - 각각의 데이터를 node 라고 부름. 이 node 가 모인 것이 sequence. 즉, 각각의 node 는 데이터와 레퍼런스를 갖고 있는 셈
+* 리스트를 사용하여 Stack 클래스를 만들 경우, `pop()` 이나 `append()`는 `O(1)`이다. 자리에 상관 없이 맨 마지막에 들어가기 때문.
+* 그러나 `pop(0)`, `insert(0, x)` 는 `O(n)`이다. 앞에서부터 자리수가 다 바뀌기 때문.
+* 논리적으로 같더라도, **벤치마크 테스팅** 을 하면 속도가 달라진다. (even though the implementations are logically equivalent, they would have very different timings when performing benchmark testing)
 
-    2. Linked list를 구현하는 이유
-        - 리스트 중간에 아이템을 넣거나 뺄 수 있다.
-        - 스택과 큐를 만들 수 있다.
-        - 처음에 사이즈를 지정할 필요가 없다.
+### 2. Linked Lists
 
-    3. Linked list의 단점
-        - pointer 때문에 array 보다 메모리를 더 먹는다.
-        - sequence이기 때문에 한 아이템을 찾으려면 진입점부터 하나 하나 체크해야 한다.
+1. Linked list 란? [(Wikipedia)](https://en.wikipedia.org/wiki/Linked_list)
 
----
+   * Linear 한 데이터의 모음. 인덱스(?)가 부여되어 있지 않음 (그만큼 메모리를 안먹음)
+     > 파이썬의 리스트는 인덱스가 부여되어 있다! 그래서 중간에 insert 하는건 `O(n)`
+   * 대신 pointer 라고 하는 애가 다음 데이터를 가리키고 있음
+   * 물론 첫 데이터는 처음이라는 표시가 있고, 마지막 데이터는 포인터를 갖고 있지 않음
+   * 각각의 데이터를 node 라고 부름. 이 node 가 모인 것이 sequence. 즉, 각각의 node 는 데이터와 레퍼런스를 갖고 있는 셈
 
-## 1-1. Unordered List
+2. Linked list 를 구현하는 이유
+
+   * 리스트 중간에 아이템을 넣거나 뺄 수 있다.
+   * 스택과 큐를 만들 수 있다.
+   * 처음에 사이즈를 지정할 필요가 없다.
+
+3. Linked list 의 단점
+   * pointer 때문에 array 보다 메모리를 더 먹는다.
+   * sequence 이기 때문에 한 아이템을 찾으려면 진입점부터 하나 하나 체크해야 한다.
+
+### 1-1. Unordered List
 
 ```python
 # Pythonic way to define getter/setter/deleter - @property를 쓰세요!
@@ -100,9 +108,7 @@ temp.x # 1234
 del temp.x
 ```
 
----
-
-## 1-2. The Unordered List Class
+### 1-2. The Unordered List Class
 
 ```python
 class UnorderedList:
@@ -171,7 +177,7 @@ class UnorderedList:
         # 순서는 바꿨는데, node 인스턴스는 그대로 남아있잖아? (size는 그대로 아닌가?)
 
 
-    # 함께 풀어봅시다!!    
+    # 함께 풀어봅시다!!
     def append(self, item):    # item이 last가 되려면? 처음 들어온 아이템까지 가서 그 next에 item을 붙인다.
         temp = Node(item)
         current = self.head
@@ -179,7 +185,6 @@ class UnorderedList:
         while current.getNext() != None:
             current = current.getNext()
         current.setNext(temp)
-
 ```
 
 ```python
@@ -233,9 +238,8 @@ mylist.print_all()
 # 14923
 ```
 
----
+### 2-1. Ordered List
 
-## 2-1. Ordered List
 OrderedList()
 
     - add(item)
@@ -249,11 +253,9 @@ OrderedList()
     - pop()
     - pop(pos)
 
-(append, insert가 안됨)
+(append, insert 가 안됨)
 
----
-
-## 2-2. The Ordered List Class
+### 2-2. The Ordered List Class
 
 ```python
 class OrderedList:
