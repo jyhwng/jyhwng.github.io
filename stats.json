@@ -60,6 +60,10 @@
       "component---src-templates-blog-post-js-0e5545303d60d686578e.js",
       "component---src-templates-blog-post-js-0e5545303d60d686578e.js.map"
     ],
+    "path---react-typescript-nextjs": [
+      "path---react-typescript-nextjs-75550512a8c09edd7b92.js",
+      "path---react-typescript-nextjs-75550512a8c09edd7b92.js.map"
+    ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-76a0c100e04050ee089c.js",
       "component---src-layouts-index-js-76a0c100e04050ee089c.js.map"
@@ -73,8 +77,8 @@
       "path---dev-env-setup-5a2fe80e25b1fb2b46fd.js.map"
     ],
     "path---index": [
-      "path---index-6df906a8672bea8ec774.js",
-      "path---index-6df906a8672bea8ec774.js.map"
+      "path---index-e4a92c5c5c33ec287be5.js",
+      "path---index-e4a92c5c5c33ec287be5.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-e9cb54be3f2687120492.js",
@@ -123,9 +127,9 @@
       "path---clean-code-1-f0488df34879ca35a313.js.map"
     ],
     "app": [
-      "app-0f60dfbc73e1ed424e6b.js",
+      "app-29ea55fda1264f8cfb7d.js",
       "build-js-styles.css",
-      "app-0f60dfbc73e1ed424e6b.js.map",
+      "app-29ea55fda1264f8cfb7d.js.map",
       "build-js-styles.css.map"
     ],
     "path---callback": [
@@ -137,8 +141,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---basic-data-structures": [
-      "path---basic-data-structures-14d1d1f41052f4ade4dd.js",
-      "path---basic-data-structures-14d1d1f41052f4ade4dd.js.map"
+      "path---basic-data-structures-3f2a1cbdaa3468d35f4d.js",
+      "path---basic-data-structures-3f2a1cbdaa3468d35f4d.js.map"
     ],
     "path---closure": [
       "path---closure-bc4d9d274d004f052a82.js",
