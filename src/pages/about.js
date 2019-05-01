@@ -4,9 +4,9 @@ import { media } from "../utils/style.js";
 import { Container } from "../components/Container";
 
 const stack = {
-  languages: ["Javascript", "Typescript", "Python"],
-  "frameworks & libraries": ["React", "MobX", "VueJS", "Django"],
-  others: ["HTML5", "CSS3"]
+  languages: ["JavaScript", "TypeScript", "Python"],
+  "frameworks & libraries": ["React", "MobX", "NextJS", "VueJS", "Django"],
+  others: ["Git", "HTML5", "CSS3"]
 };
 
 const About = () => (
