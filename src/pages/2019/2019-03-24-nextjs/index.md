@@ -1,9 +1,9 @@
 ---
 path: "/react-typescript-nextjs"
 date: "2019-03-24"
-title: "React + Next.js + TypeScript + Netlify = ❤️"
-tags: ['nextjs', 'ssr','react', 'express', 'typescript', 'netlify']
-excerpt: "Building and deploying SSR React with NextJS and Netlify"
+title: "React + Next.js + TypeScript = ❤️"
+tags: ['nextjs', 'ssr','react', 'express', 'typescript']
+excerpt: "Building and deploying SSR React with NextJS"
 type: ""
 ---
 
@@ -267,18 +267,3 @@ export default MapPage;
 > `getInitialProps` 안에서는 서버 사이드기 때문에 `console.log()`를 찍으면 결과값은 브라우저가 아니라 터미널에 나타나게 됩니다.
 
 > Next.js 에서 `API_URL`같은 환경변수를 사용하는 방법은 [`dotenv`](https://jaketrent.com/post/environment-variables-in-nextjs/) 또는 Next.js 에서 지원하는 [`getConfig()`](https://zeit.co/blog/next5-1#environment-configuration)를 이용하는 방법이 있습니다.
-
----
-
-## 5. Deploy
-
-Netflify 를 통해 배포하기 위해서는 `next export`라는 스크립트를 추가해주어야 합니다. 이 때 반드시 `next build` 스크립트를 먼저 실행하여 빌드파일을 생성해야 합니다.
-
-```javascript
-// package.json
-"scripts": {
-  "export": "next build && next export",
-}
-```
-
-Netlify 의 Deploys / Deploy settings 메뉴에서 Build settings / Build command 에 `npm run export` 를 추가힙니다.
