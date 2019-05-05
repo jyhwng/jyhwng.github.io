@@ -61,7 +61,7 @@ Webpack 을 사용한다면 `url-loader` 플러그인을 통해 이미지 모듈
 * 이미지를 preload 하지 않았을 때:
   ![before](https://user-images.githubusercontent.com/18133030/57197464-88adfe00-6fa2-11e9-97fb-9cfe4ccc7479.png)
 
-* preload 를 한 이미지는 다른 자원보다 먼저 로드된다.
+* preload 했을 때 (다른 자원보다 먼저 로드된다):
   ![after](https://user-images.githubusercontent.com/18133030/57197468-92376600-6fa2-11e9-9898-18cd1c93e37b.png)
 
 ### 2. `Image()` constructor 사용하기
@@ -74,8 +74,6 @@ window.onload = function() {
   img.src = "assets/image.png";
 };
 ```
-
-\#3 의 `IntersectionObserver` 에서도 이 방법을 사용한다.
 
 ---
 
@@ -96,10 +94,6 @@ window.onload = function() {
 ```javascript
 document.addEventListener("DOMContentLoaded", function() {
   const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
-  const loadImage = img => {
-    img.src = img.dataset.src;
-    img.srcset = img.dataset.srcset;
-  };
 
   let lazyImageObserver = new IntersectionObserver(
     (entries, observer) => {
@@ -107,8 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
-          loadImage(lazyImage);
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+
           /** load를 마치면 observe를 끝낸다. */
+          lazyImage.classList.remove("lazy");
           lazyImageObserver.unobserve(lazyImage);
         }
       });
@@ -129,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ## 4. `gzip` & CDN
 
-이밖에도 자원을 `gzip` 으로 압축하거나 CDN 을 사용하여 최적화할 수 있다. CDN(Content Delivery Network)는 ~~마치 쿠\*의 로켓직구처럼~~ 전세계 곳곳에 엣지 로케이션에서 사용자에게 가장 빠르게 전달할 수 있는 루트로 자원을 전달하는 방법이다.
+이밖에도 자원을 `gzip` 으로 압축하거나 CDN 을 사용하여 최적화할 수 있다. CDN(Content Delivery Network)는 ~~마치 쿠\*의 로켓직구처럼~~ 전세계 곳곳의 엣지 로케이션에서 사용자에게 가장 빠르게 전달할 수 있는 루트로 자원을 전달하는 방법이다.
 
 ---
 

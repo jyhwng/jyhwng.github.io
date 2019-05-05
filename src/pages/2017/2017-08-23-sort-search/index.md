@@ -69,7 +69,11 @@ def binarySearch(alist, item):
     - 각 데이터를 알맞은 slot에 매핑해주는 식을 `hash function`이라고 한다.
     - 테이블 크기에 대해 데이터를 가진 slot의 개수를 `load factor`(부하계수)라고 한다. 테이블 크기가 11이고 데이터가 채워진 slot이 6개라면 load factor(λ)는 6/11이다.
 
-2. Remainder method
+   * 가장 간단한 방식의 hash function 이다. 데이터를 해시테이블의 크기로 나눈 나머지로 할당하는 방법이다.
+     ![img](http://interactivepython.org/courselib/static/pythonds/_images/hashtable2.png)
+   * 그러나 이 경우, 같은 나머지 값을 가진 데이터는 한 슬롯에서 충돌하게 된다. 위의 예에서 만약 44 라는 데이터를 넣을 경우 '44 % 11 = 0'이기 때문에 77 과 충돌하게 된다.
+   * 충돌이 발생하지 않는 hash function 을 `Perfect hash function`이라고 부른다. 그러나 임의의 데이터들의 모음이 있을 때, 완벽한 해시 함수를 만드는 것은 데이터 숫자만큼 해시 테이블의 숫자를 늘리지 않는 이상 불가능하다.
+   * 완벽한 해시 함수를 만들 수 없다면 충돌을 최소화 하는 방법을 찾으면 된다.
 
     - 가장 간단한 방식의 hash function이다. 데이터를 해새테이블의 크기로 나눈 나머지로 할당하는 방법이다.
     ![img](http://interactivepython.org/courselib/static/pythonds/_images/hashtable2.png)
