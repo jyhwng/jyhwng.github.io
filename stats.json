@@ -77,8 +77,8 @@
       "path---dev-env-setup-5a2fe80e25b1fb2b46fd.js.map"
     ],
     "path---index": [
-      "path---index-0af5f3dd44cfb3f87e6f.js",
-      "path---index-0af5f3dd44cfb3f87e6f.js.map"
+      "path---index-223299c3a63db5f1a1f5.js",
+      "path---index-223299c3a63db5f1a1f5.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-e9cb54be3f2687120492.js",
@@ -107,8 +107,8 @@
       "path---arrow-function-2a47741db506146bb6ff.js.map"
     ],
     "path---sort-search": [
-      "path---sort-search-23cdc24cf2ce8b08a569.js",
-      "path---sort-search-23cdc24cf2ce8b08a569.js.map"
+      "path---sort-search-d6350569144fdc318e03.js",
+      "path---sort-search-d6350569144fdc318e03.js.map"
     ],
     "path---django-aws": [
       "path---django-aws-a55fb60e2eacdef0c36d.js",
@@ -127,9 +127,9 @@
       "path---clean-code-1-f0488df34879ca35a313.js.map"
     ],
     "app": [
-      "app-e27d5e175e429cca5761.js",
+      "app-586f6926a7e1fc1ef8c9.js",
       "build-js-styles.css",
-      "app-e27d5e175e429cca5761.js.map",
+      "app-586f6926a7e1fc1ef8c9.js.map",
       "build-js-styles.css.map"
     ],
     "path---callback": [
@@ -151,6 +151,10 @@
     "component---src-pages-about-js": [
       "component---src-pages-about-js-7831aa9fd8890322555f.js",
       "component---src-pages-about-js-7831aa9fd8890322555f.js.map"
+    ],
+    "path---image-optimization": [
+      "path---image-optimization-3a686234ccae8b66bb5a.js",
+      "path---image-optimization-3a686234ccae8b66bb5a.js.map"
     ],
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
