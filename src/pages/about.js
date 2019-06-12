@@ -13,7 +13,7 @@ const About = () => (
   <Container>
     <Wrapper>
       <Section>
-        <p>I'm Jiyoung Hwang, learning web development since 2017.</p>
+        <p>I'm Jiyoung Hwang and I have been learning web development since 2017.</p>
         <p>
           Come and say hi 👉{" "}
           <a href="https://twitter.com/@jyhwng" target="_blank">
