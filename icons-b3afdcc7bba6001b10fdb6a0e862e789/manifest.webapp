@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "calmels-and-snakes",
+  "description": null,
+  "icons": {
+    "60": "/icons-b3afdcc7bba6001b10fdb6a0e862e789/firefox_app_60x60.png",
+    "128": "/icons-b3afdcc7bba6001b10fdb6a0e862e789/firefox_app_128x128.png",
+    "512": "/icons-b3afdcc7bba6001b10fdb6a0e862e789/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
