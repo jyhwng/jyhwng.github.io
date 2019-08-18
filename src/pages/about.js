@@ -3,21 +3,21 @@ import styled from "styled-components";
 import { media } from "../utils/style.js";
 import { Container } from "../components/Container";
 import { withLayout } from "../utils/withLayout";
+import { Emoji } from "../components/Emoji";
 
 const stack = {
   languages: ["JavaScript", "TypeScript", "Python"],
-  "frameworks & libraries": ["React", "MobX", "NextJS", "VueJS", "Django"],
-  others: ["Git", "HTML5", "CSS3"]
+  "frameworks & libraries": ["React", "MobX", "Next.js", "Jest", "Django", "Webpack", "Cypress"],
+  others: ["Git", "HTML5/CSS3"]
 };
 
 const About = () => (
   <Container>
     <Wrapper>
       <Section>
-        <p>I'm Jiyoung Hwang, learning web development since 2017.</p>
         <p>
-          Come and say hi 👉{" "}
-          <a href="https://twitter.com/@jyhwng" target="_blank">
+          Hi! I'm Jiyoung, frontend developer from Seoul, Korea. Come and say hi <Emoji>👉</Emoji>{" "}
+          <a href="https://twitter.com/@jyhwng" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </p>
@@ -37,6 +37,7 @@ const About = () => (
             <a
               href="https://wi-tech.org/2017/11/05/jiyoung-hwang-django-girls-organizer/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Jiyoung Hwang: Django Girls Organizer
             </a>, Witech, 2017.11.05
@@ -45,6 +46,7 @@ const About = () => (
             <a
               href="http://thepin.ch/techgear/m9qmfd/adela-branch-1"
               target="_blank"
+              rel="noopener noreferrer"
             >
               개발 공부하는 여자들, 장고걸스를 만나보았다
             </a>, Pinch, 2017.04.11
@@ -58,8 +60,8 @@ const About = () => (
 const Wrapper = styled.div`
   margin-bottom: 160px;
   ${media.tablet`
-        padding: 0 16px;
-    `};
+    padding: 0 16px;
+  `};
 `;
 
 const Column = styled.div`
@@ -67,9 +69,9 @@ const Column = styled.div`
 `;
 
 const Section = styled.section`
-  padding-top: 24px;
   margin-bottom: 40px;
   & + & {
+    padding-top: 24px;
     border-top: 1px solid #ddd;
   }
   li {
