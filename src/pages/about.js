@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { media } from "../utils/style.js";
 import { Container } from "../components/Container";
+import { withLayout } from "../utils/withLayout";
 
 const stack = {
   languages: ["JavaScript", "TypeScript", "Python"],
@@ -89,4 +90,4 @@ const Tag = styled.div`
   margin-right: 8px;
 `;
 
-export default About;
+export default withLayout(About);

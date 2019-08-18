@@ -1,7 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Container } from '../Container'
-import { media } from '../../utils/style.js'
+import React from "react";
+import styled from "styled-components";
 
 export const Cards = ({children}) => (
   <Wrapper>

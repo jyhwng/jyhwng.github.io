@@ -16,7 +16,7 @@ export class Footer extends Component {
           <Wrapper>
             <p>
               Found an error? Help me correct by submitting issues{" "}
-              <a href="https://github.com/jyhwng/blog/" target="_blank">
+              <a href="https://github.com/jyhwng/blog/" target="_blank" rel="noopener noreferrer">
                 here
               </a>.
             </p>

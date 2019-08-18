@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import Link from 'gatsby-link'
-import { Tag } from '../Tag'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import { Tag } from "../Tag";
 
 export const Card = ({postType, path, title, date, excerpt, tags}) => (
   <CardBase postType={postType}>

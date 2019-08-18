@@ -1,22 +1,22 @@
 import React from "react";
-// import Link from 'gatsby-link'
 import Helmet from "react-helmet";
 import { Post } from "../components/Post";
+import { Layout } from "../components/layouts";
+import { graphql } from "gatsby";
 
-const Template = ({ data, location, pathContext }) => {
+export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
   return (
-    <div>
+    <Layout>
       <Helmet title={`${frontmatter.title} - Camels and Snakes`} />
       <Post frontmatter={frontmatter} html={html} />
-    </div>
+    </Layout>
   );
-};
+}
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -29,5 +29,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default Template;
