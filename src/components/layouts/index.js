@@ -6,10 +6,10 @@ import "./index.css";
 import "./syntax.css";
 
 export const Layout = ({ children }) => (
-  <div>
+  <>
     <Helmet title="Camels and Snakes" meta={[{ name: "jyhwng", content: "blog" }]} />
     <Header />
-    <div>{children}</div>
+    <>{children}</>
     <Footer />
-  </div>
+  </>
 );

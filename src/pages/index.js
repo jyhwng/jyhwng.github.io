@@ -1,16 +1,17 @@
-import React from 'react'
-import { Card } from '../components/Card'
-import { Cards } from '../components/Cards'
+import React from "react";
+import { graphql } from "gatsby";
+import { Card } from "../components/Card";
+import { Cards } from "../components/Cards";
+import { withLayout } from "../utils/withLayout";
 
-const IndexPage = ({data}) => {
-  const posts = data.allMarkdownRemark.edges
-
+const IndexPage = ({ data: { allMarkdownRemark } }) => {
+  const posts = allMarkdownRemark.edges;
   return (
     <Cards>
-      {posts.map(({node: post}, index) => {
-        const { frontmatter } = post
+      {posts.map(({ node: post }, index) => {
+        const { frontmatter } = post;
         return (
-          <Card 
+          <Card
             key={index}
             postType={frontmatter.type}
             path={frontmatter.path}
@@ -19,14 +20,14 @@ const IndexPage = ({data}) => {
             excerpt={frontmatter.excerpt}
             tags={frontmatter.tags}
           />
-        )
+        );
       })}
     </Cards>
-  )
-}
+  );
+};
 
 export const query = graphql`
-  query IndexQuery {
+  {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -46,6 +47,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default withLayout(IndexPage);
