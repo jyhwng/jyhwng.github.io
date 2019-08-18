@@ -1,16 +1,17 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Post } from "../components/Post";
+import { Layout } from "../components/layouts";
 import { graphql } from "gatsby";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <div>
+    <Layout>
       <Helmet title={`${frontmatter.title} - Camels and Snakes`} />
       <Post frontmatter={frontmatter} html={html} />
-    </div>
+    </Layout>
   );
 }
 
