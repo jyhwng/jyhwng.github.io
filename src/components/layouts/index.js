@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Helmet from "react-helmet";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
@@ -9,7 +10,11 @@ export const Layout = ({ children }) => (
   <>
     <Helmet title="Camels and Snakes" meta={[{ name: "jyhwng", content: "blog" }]} />
     <Header />
-    <>{children}</>
+    <Inner>{children}</Inner>
     <Footer />
   </>
 );
+
+const Inner = styled.div`
+  padding-top: 40px;
+`;
