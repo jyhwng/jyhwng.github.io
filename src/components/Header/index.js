@@ -1,9 +1,8 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-import { media } from '../../utils/style.js'
-import { Container } from '../Container'
-import { Menu } from '../Menu'
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { media } from "../../utils/style.js";
+import { Menu } from "../Menu";
 
 export class Header extends React.Component {
   state = { isCollapsed: false }
