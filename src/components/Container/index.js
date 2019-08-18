@@ -1,12 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-export const Container = ({children}) => (
-  <ContainerBase>{children}</ContainerBase>
-)
+export const Container = ({ children }) => <ContainerBase>{children}</ContainerBase>;
 
 const ContainerBase = styled.div`
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
   width: 100%;
-`
+`;

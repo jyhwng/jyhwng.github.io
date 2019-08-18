@@ -11,20 +11,24 @@ export class Footer extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <FooterBase isOpen={this.state.isOpen}>
           <Wrapper>
             <p>
-              Found an error? Help me correct by submitting issues{" "}
-              <a href="https://github.com/jyhwng/blog/" target="_blank" rel="noopener noreferrer">
+              Found an error? Help me correct it by submitting issues{" "}
+              <a
+                href="https://github.com/jyhwng/jyhwng.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 here
               </a>.
             </p>
-            <p>© 2017-2018 Jiyoung Hwang</p>
+            <p>© 2017-2019 jyhwng</p>
           </Wrapper>
         </FooterBase>
         <Button onClick={this.handleOpenFooter} />
-      </div>
+      </>
     );
   }
 }
@@ -84,7 +88,7 @@ const FooterBase = styled.footer`
 `;
 
 const Wrapper = styled.div`
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 40px 0;
   p {
