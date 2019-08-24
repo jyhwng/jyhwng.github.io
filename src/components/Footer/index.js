@@ -22,7 +22,8 @@ export class Footer extends Component {
                 rel="noopener noreferrer"
               >
                 here
-              </a>.
+              </a>
+              .
             </p>
             <p>© 2017-2019 jyhwng</p>
           </Wrapper>
@@ -35,19 +36,6 @@ export class Footer extends Component {
 
 const Button = ({ onClick }) => (
   <ButtonWrapper>
-    <Anchor onClick={() => window.scroll({ top: 0, behavior: "smooth" })}>
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="16 12 12 8 8 12" />
-        <line x1="12" y1="16" x2="12" y2="8" />
-      </svg>
-    </Anchor>
     <Anchor onClick={onClick}>
       <svg
         viewBox="0 0 24 24"
@@ -65,9 +53,9 @@ const Button = ({ onClick }) => (
 );
 
 const FooterBase = styled.footer`
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   position: fixed;
   background-color: #fff;
   border-top: 1px solid #ddd;
@@ -114,8 +102,5 @@ const Anchor = styled.a`
     height: 32px;
     stroke: #303030;
     fill: #fff;
-  }
-  &:first-child {
-    margin-bottom: 8px;
   }
 `;
