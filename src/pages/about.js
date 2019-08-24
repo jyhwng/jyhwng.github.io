@@ -16,7 +16,7 @@ const About = () => (
     <Wrapper>
       <Section>
         <p>
-          Hi! I'm Jiyoung, frontend developer from Seoul, Korea. Come and say hi <Emoji>👉</Emoji>{" "}
+          Hi! I'm Jiyoung, frontend developer from Seoul, Korea.{" "}
           <a href="https://twitter.com/@jyhwng" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
@@ -79,6 +79,9 @@ const Section = styled.section`
   }
   h3 {
     text-transform: capitalize;
+  }
+  a {
+    color: #303030;
   }
 `;
 
