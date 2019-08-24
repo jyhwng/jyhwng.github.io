@@ -1,65 +1,75 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { media } from "../../utils/style.js";
 import { Menu } from "../Menu";
+import { Emoji } from "../Emoji";
 
 export class Header extends React.Component {
-  state = { isCollapsed: false }
+  state = { isCollapsed: false };
 
   collapseHeader = () => {
-    const navHeight = 22
-    const navPaddingTop = 72
+    const navHeight = 22;
+    const navPaddingTop = 72;
 
     if (window.scrollY > navHeight + navPaddingTop) {
-      this.setState({ isCollapsed: true })
+      this.setState({ isCollapsed: true });
     } else {
-      this.setState({ isCollapsed: false })
+      this.setState({ isCollapsed: false });
     }
-  }
+  };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.collapseHeader)
+    window.addEventListener("scroll", this.collapseHeader);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.collapseHeader)
-  }
-
-  renderNavOverlay = () => {
-    const { isCollapsed } = this.state
-    return (
-      <TitleOverlay isCollapsed={isCollapsed}>
-        <Nav>
-          <Title/>
-          <Menu/>
-        </Nav>
-      </TitleOverlay>
-    )
+    window.removeEventListener("scroll", this.collapseHeader);
   }
 
   render() {
-    const { isCollapsed } = this.state
+    const { isCollapsed } = this.state;
     return (
-      <Nav>
-        {this.renderNavOverlay()}
-        <Wrapper>
-          <Title/>
-          <Menu/>
-        </Wrapper>
-      </Nav>
-    )
+      <>
+        <div style={{ height: "56px" }} />
+        <Nav isCollapsed={isCollapsed}>
+          <Wrapper>
+            <Inner>
+              <Title />
+              <Menu />
+            </Inner>
+          </Wrapper>
+        </Nav>
+      </>
+    );
   }
 }
 
 const Title = () => (
   <Link to="/">
-    <span>🐫 and 🐍</span>
+    <span>
+      <Emoji>🐫</Emoji> and <Emoji>🐍</Emoji>
+    </span>
   </Link>
-)
+);
 
-const NavStyle = `
+const Wrapper = styled.div`
+  width: 100%;
+`;
+
+const Nav = styled.nav`
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  position: sticky;
+  background-color: #fff;
+  ${props => props.isCollapsed && `border-bottom: 1px solid #ddd`};
+`;
+
+const Inner = styled.div`
   display: flex;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 720px;
   align-items: center;
   justify-content: space-between;
   a {
@@ -68,33 +78,4 @@ const NavStyle = `
     color: #303030;
     font-size: 1.2em;
   }
-`
-
-const Wrapper = styled.div`
-  width: 100%;
-  padding: 72px 0 56px 0;
-  ${media.tablet`padding: 48px 16px;`}
-  ${NavStyle}
-`
-
-const TitleOverlay = styled.div`
-  z-index: 1;
-  left: 0;
-  right: 0;
-  top: -150px;
-  padding: 16px;
-  position: fixed;
-  background-color: #fff;
-  transition: top 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-bottom: 1px solid #ddd;
-  ${props => props.isCollapsed && `
-    top: 0;
-  `}
-`
-
-const Nav = styled.nav`
-  width: 100%;
-  margin: 0 auto;
-  max-width: 960px;
-  ${NavStyle}  
-`
+`;
