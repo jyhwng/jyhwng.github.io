@@ -23,7 +23,7 @@
   "main": "n/a",
   "scripts": {
     "build": "rm -rf .cache && gatsby build",
-    "dev": "rm -rf .cache && gatsby develop",
+    "dev": "gatsby develop",
     "deploy": "rm -rf .cache && gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
