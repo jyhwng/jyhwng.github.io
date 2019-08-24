@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { media } from "../utils/style.js";
 import { Container } from "../components/Container";
 import { withLayout } from "../utils/withLayout";
-import { Emoji } from "../components/Emoji";
 
 const stack = {
   languages: ["JavaScript", "TypeScript", "Python"],
@@ -19,6 +18,9 @@ const About = () => (
           Hi! I'm Jiyoung, frontend developer from Seoul, Korea.{" "}
           <a href="https://twitter.com/@jyhwng" target="_blank" rel="noopener noreferrer">
             Twitter
+          </a>{" "}
+          <a href="https://github.com/jyhwng" target="_blank" rel="noopener noreferrer">
+            GitHub
           </a>
         </p>
       </Section>
