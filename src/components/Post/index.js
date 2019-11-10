@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ReactUtterences from "react-utterances";
+import { Comment } from "../Comment";
 
 import { media } from "../../utils/style.js";
 import { Tag } from "../Tag";
@@ -27,12 +27,7 @@ export const Post = ({ frontmatter, html }) => {
           <Content dangerouslySetInnerHTML={{ __html: html }} />
         </Container>
       </PostBase>
-      <ReactUtterences
-        repo="jyhwng/jyhwng.github.io"
-        type="title"
-        theme="github-light"
-        crossOrigin="anonymous"
-      />
+      <Comment />
     </>
   );
 };
