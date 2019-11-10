@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import ReactUtterences from "react-utterances";
+
 import { media } from "../../utils/style.js";
 import { Tag } from "../Tag";
 import { Container } from "../Container";
@@ -8,18 +10,30 @@ import "./index.css";
 export const Post = ({ frontmatter, html }) => {
   const { title, date, excerpt, tags } = frontmatter;
   return (
-    <PostBase>
-      <Container>
-        <h1>{title}</h1>
-        <P>{excerpt}</P>
-        <div>{tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
-        <P>{date}</P>
-      </Container>
-      <Hr />
-      <Container>
-        <Content dangerouslySetInnerHTML={{ __html: html }} />
-      </Container>
-    </PostBase>
+    <>
+      <PostBase>
+        <Container>
+          <h1>{title}</h1>
+          <P>{excerpt}</P>
+          <div>
+            {tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
+            ))}
+          </div>
+          <P>{date}</P>
+        </Container>
+        <Hr />
+        <Container>
+          <Content dangerouslySetInnerHTML={{ __html: html }} />
+        </Container>
+      </PostBase>
+      <ReactUtterences
+        repo="jyhwng/jyhwng.github.io"
+        type="title"
+        theme="github-light"
+        crossOrigin="anonymous"
+      />
+    </>
   );
 };
 
@@ -41,7 +55,7 @@ const Hr = styled.hr`
 `;
 
 const Content = styled.div`
-  margin-bottom: 160px;
+  margin-bottom: 60px;
   h2 {
     margin-top: 0;
     word-break: break-all; /* break h2 in code block */
