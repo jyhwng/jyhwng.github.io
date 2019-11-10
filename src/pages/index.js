@@ -13,7 +13,6 @@ const IndexPage = ({ data: { allMarkdownRemark } }) => {
         return (
           <Card
             key={index}
-            postType={frontmatter.type}
             path={frontmatter.path}
             title={frontmatter.title}
             date={frontmatter.date}
@@ -41,7 +40,6 @@ export const query = graphql`
             path
             tags
             excerpt
-            type
           }
         }
       }
