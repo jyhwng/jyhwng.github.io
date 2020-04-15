@@ -6,8 +6,17 @@ import { withLayout } from "../utils/withLayout";
 
 const stack = {
   languages: ["JavaScript", "TypeScript", "Python"],
-  "frameworks & libraries": ["React", "MobX", "Next.js", "Jest", "Django", "Webpack", "Cypress"],
-  others: ["Git", "HTML5/CSS3"]
+  "frameworks & libraries": [
+    "React",
+    "Redux",
+    "Next.js",
+    "Express",
+    "Jest",
+    "Django",
+    "Webpack",
+    "Cypress",
+  ],
+  others: ["Git", "HTML5/CSS3"],
 };
 
 const About = () => (
