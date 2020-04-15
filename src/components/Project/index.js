@@ -7,7 +7,7 @@ export const Project = ({ project }) => (
     <LeftWrapper>
       <Title>
         {project.url ? (
-          <a href={project.url} target="_blank">
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
             {project.title}
           </a>
         ) : (

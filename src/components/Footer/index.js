@@ -1,38 +1,34 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { media } from "../../utils/style.js";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { media } from '../../utils/style.js';
 
-export class Footer extends Component {
-  state = { isOpen: false };
+const currentYear = new Date().getFullYear();
 
-  handleOpenFooter = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
+export const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  render() {
-    return (
-      <>
-        <FooterBase isOpen={this.state.isOpen}>
-          <Wrapper>
-            <p>
-              Found an error? Help me correct it by submitting issues{" "}
-              <a
-                href="https://github.com/jyhwng/jyhwng.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                here
-              </a>
-              .
-            </p>
-            <p>© 2017-2019 jyhwng</p>
-          </Wrapper>
-        </FooterBase>
-        <Button onClick={this.handleOpenFooter} />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <FooterBase isOpen={isOpen}>
+        <Wrapper>
+          <p>
+            Found an error? Help me correct it by submitting issues{' '}
+            <a
+              href="https://github.com/jyhwng/jyhwng.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            .
+          </p>
+          <p>© 2017-{currentYear} jyhwng</p>
+        </Wrapper>
+      </FooterBase>
+      <Button onClick={() => setIsOpen(!isOpen)} />
+    </>
+  );
+};
 
 const Button = ({ onClick }) => (
   <ButtonWrapper>
