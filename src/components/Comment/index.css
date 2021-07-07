@@ -1,0 +1,15 @@
+.utterances {
+  max-width: 720px;
+  margin-bottom: 100px;
+}
+
+.utterances-frame {
+  position: relative;
+}
+
+@media (max-width: 720px) {
+  .utterances {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

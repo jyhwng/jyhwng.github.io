@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ## 4. `gzip` & CDN
 
-이밖에도 자원을 `gzip` 으로 압축하거나 CDN 을 사용하여 최적화할 수 있다. CDN(Content Delivery Network)는 ~~마치 쿠\*의 로켓직구처럼~~ 전세계 곳곳의 엣지 로케이션에서 사용자에게 가장 빠르게 전달할 수 있는 루트로 자원을 전달하는 방법이다.
+이밖에도 자원을 `gzip` 으로 압축하거나 CDN 을 사용하여 최적화할 수 있다. CDN(Content Delivery Network)는 전세계 곳곳의 엣지 로케이션에서 사용자에게 가장 빠르게 전달할 수 있는 루트로 자원을 전달하는 방법이다.
 
 ---
 

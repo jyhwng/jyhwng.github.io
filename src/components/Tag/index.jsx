@@ -13,4 +13,5 @@ const Base = styled.span`
   margin-right: 8px;
   margin-bottom: 4px;
   text-transform: lowercase;
-`
+  font-family: PT Mono;
+`;
