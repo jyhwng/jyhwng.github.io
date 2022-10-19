@@ -24,7 +24,7 @@ const About = () => (
     <Wrapper>
       <Section>
         <p>
-          Hi! I'm Jiyoung, frontend developer from Seoul, Korea.{" "}
+          Hi! I'm Jiyoung, software developer in Berlin from Korea.{" "}
           <a href="https://twitter.com/@jyhwng" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>{" "}
